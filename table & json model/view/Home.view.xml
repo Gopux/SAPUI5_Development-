@@ -1,0 +1,49 @@
+<mvc:View controllerName="com.tcs.hr.sahadat.project1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Text id="text" text="Hello &#10; users!"/>
+<Table id="table" items="{/items}">
+    <columns>
+      <Column id="column1"
+        width="12em">
+        <Text id="text2" text="Product ID" />
+      </Column>
+       <Column  id="column2"
+        minScreenWidth="Tablet"
+        demandPopin="true">
+        <Text id="text1" text="Product Name" />
+      </Column>
+	  <Column id="column3"
+		minScreenWidth="Desktop"
+		demandPopin="true"
+		hAlign="End">
+		<Text id="text3" text="Product Description" />
+		</Column>
+		<Column id="column4"
+		minScreenWidth="Desktop"
+		demandPopin="true"
+		hAlign="Center">
+		<Text id="text4" text="Release Date" />
+		</Column>
+		<Column id="column5"
+		hAlign="End">
+		<Text id="text5" text="Price" />
+		</Column>
+    </columns>
+	<items>
+      <ColumnListItem id="columnListItem">
+        <cells>
+          <Text id="text6" text="{value}" />
+          <Text id="text7" text="{name}" />
+          <Text id="text8" text="{description}" />
+          <Text id="text9" text="{release}" />
+          <Text id="text10" text="{price}" />
+        </cells>
+      </ColumnListItem>
+    </items>
+</Table>
+        </content>
+    </Page>
+</mvc:View>

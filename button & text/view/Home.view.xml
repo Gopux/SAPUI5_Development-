@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.tcs.hr.sahadat.project1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text id="text" text="Hello &#10; users!"/>
+        <Button id="button1" text="Login" press="onLogIn"/>
+        <Button id="button2" text="Logout" press="onLogOut"/>
+        <content />
+    </Page>
+</mvc:View>

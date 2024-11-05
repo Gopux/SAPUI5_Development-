@@ -1,0 +1,62 @@
+<mvc:View controllerName="com.ey.hr.sahadat.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Table id="table" items="{ProdModel>/results}">
+        	<headerToolbar>
+			<OverflowToolbar id="OverflowToolbar">
+				<content>
+					<Title id="Title" text="Products Table" level="H2"/>
+					<ToolbarSpacer id="ToolbarSpacer" />
+			        <Button id="button1" text="Add" press="onAdd" />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+    <columns>
+      <Column id="column1"
+        width="12em">
+        <Text id="text2" text="Product ID" />
+      </Column>
+       <Column  id="column2"
+        minScreenWidth="Tablet"
+        demandPopin="true">
+        <Text id="text1" text="Product Name" />
+      </Column>
+	  <Column id="column3"
+		minScreenWidth="Desktop"
+		demandPopin="true"
+		hAlign="End">
+		<Text id="text3" text="Product Description" />
+		</Column>
+		<Column id="column4"
+		minScreenWidth="Desktop"
+		demandPopin="true"
+		hAlign="Center">
+		<Text id="text4" text="Rating" />
+		</Column>
+		<Column id="column5"
+		hAlign="End">
+		<Text id="text5" text="Price" />
+		</Column>
+    <Column id="column6"
+		hAlign="Center">
+		<Text id="text" text="Action" />
+		</Column>
+    </columns>
+	<items>
+      <ColumnListItem id="columnListItem">
+        <cells>
+          <Text id="text6" text="{ProdModel>ID}" />
+          <Text id="text7" text="{ProdModel>Name}" />
+          <Text id="text8" text="{ProdModel>Description}" />
+          <Text id="text9" text="{ProdModel>Rating}" />
+          <Text id="text10" text="{ProdModel>Price}" />
+        </cells>
+      </ColumnListItem>
+    </items>
+</Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" displayBlock="true" xmlns:eydcc="ey.cc.eydcc.controls" xmlns:t="sap.ui.table" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:f="sap.ui.layout.form">
+    <Dialog id="addDialog" title="Add Product" class="" >
+    <content>
+        <f:SimpleForm id="addForm" class="" editable="true" layout="ResponsiveGridLayout" >
+                <f:content>
+                    <Label id="label6"  text="Product ID" class=""/>
+                    <Input id="input6" value="{productModel>/ID}"   />
+                    <Label id="label7"  text="Product Name" class=""/>
+                    <Input id="input8" value="{productModel>/Name}"  />
+                    <Label id="label8"  text="Description" class=""/>
+                    <Input id="input9" value="{productModel>/Description}"  />
+                    <Label id="label9" text="Price" class=""/>
+                    <Input id="input10" value="{productModel>/Price}"  />
+                    <Label id="label10" text="Rating" class=""/>
+                    <Input id="input11" value="{productModel>/Rating}"  />
+                    
+                </f:content>
+        </f:SimpleForm>
+                        
+    </content>
+    <beginButton>
+     <Button id= "saveBtnAdd"  text="Save" press="onSaveRecordAdd" />
+    </beginButton>
+     <endButton>
+     <Button id= "cancelBtnAdd" text="Cancel"  press="onCancelRecordAdd" />
+           
+    </endButton>
+    
+ 
+    </Dialog>
+</core:FragmentDefinition>

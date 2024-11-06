@@ -1,0 +1,76 @@
+<mvc:View controllerName="com.tcs.hr.sahadat.project1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <Table id="idProductsTable"
+		inset="false" items="{SupplierModel>/results}">
+			<headerToolbar>
+			<OverflowToolbar id="OverflowToolbar">
+				<content>
+					<Title id="title" text="Suppliers Info" level="H2"/>
+					<ToolbarSpacer id="ToolbarSpacer" />
+					<Button id="btn" text="Add Supplier" press="onAdd" />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column id="Column1"
+				width="12em">
+				<Text id="text1" text="Supplier ID" />
+			</Column>
+			<Column id="Column2"
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="End">
+				<Text id="text2" text="Supplier Name" />
+			</Column>
+			<Column id="Column3"
+				hAlign="End">
+				<Text id="text3" text="Supplier Street" />
+			</Column>
+			<Column id="Column4"
+				hAlign="End">
+				<Text id="text4" text="Supplier City" />
+			</Column>
+			<Column id="Column5"
+				hAlign="End">
+				<Text id="text5" text="Supplier State" />
+			</Column>
+			<Column id="Column6"
+				hAlign="End">
+				<Text id="text6" text="Supplier ZipCode" />
+			</Column>
+			<Column id="Column7"
+				hAlign="End">
+				<Text id="text7" text="Supplier Country" />
+			</Column>
+			<Column id="Column8"
+				hAlign="End">
+				<Text id="text8" text="Supplier Concurrency" />
+			</Column>
+			<Column id="Column9"
+				hAlign="End">
+				<Text id="text" text="Action" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem id="ColumnListItem" vAlign="Middle">
+				<cells>
+					
+					<Text id="text9" text="{SupplierModel>ID}" />
+					<Text id="text10" text="{SupplierModel>Name}" />
+					<Text id="text11" text="{SupplierModel>Address/Street}" />
+					<Text id="text12" text="{SupplierModel>Address/City}" />
+                    <Text id="text13" text="{SupplierModel>Address/State}"/>
+					<Text id="text14" text="{SupplierModel>Address/ZipCode}"/> 
+					<Text id="text15" text="{SupplierModel>Address/Country}"/>
+					<Text id="text16" text="{SupplierModel>Concurrency}"/>     
+					<Button id="btn5" text="Delete" press="onDelete" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table> 
+    </content>
+    </Page>
+</mvc:View>

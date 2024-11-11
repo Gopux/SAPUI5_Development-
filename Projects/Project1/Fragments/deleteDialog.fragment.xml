@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+   xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" >
+   <Dialog id="deleteDialog" title="Delete">
+   <Text id="text19" text="Are you sure you want to delete the selected record" />
+   <beginButton>
+   <Button id="btn7" text="Yes" press="onYes" />
+   </beginButton>
+   <endButton>
+   <Button id="btn8" text="No" press="onNo" />
+   </endButton>
+   </Dialog>
+</core:FragmentDefinition>

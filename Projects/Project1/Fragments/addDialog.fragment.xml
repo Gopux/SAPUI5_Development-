@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" 
+xmlns:l="sap.ui.layout"  xmlns:f="sap.ui.layout.form" 
+>
+	<Dialog id="addDialog" title="Add Supplier" >
+		<f:SimpleForm id="addForm" class="" editable="true" layout="ResponsiveGridLayout" >
+			<f:content>
+				<Label id="label1" text="Supplier ID" />
+                <Input id="input" value="{jsonAddModel>/ID}" />
+				<Label id="label2" text="Supplier Name" />
+				<Input id="input1" value="{jsonAddModel>/Name}" />
+				<Label id="label3" text="Supplier Street" />
+				<Input id="input2" value="{jsonAddModel>/Address/Street}" />
+				<Label id="label4" text="Supplier City" />
+                <Input id="input5" value="{jsonAddModel>/Address/City}" />
+				<Label id="label5" text="Supplier State" />
+				<Input id="input6" value="{jsonAddModel>/Address/State}" />
+				<Label id="label6" text="Supplier ZipCode" />
+				<Input id="input7" value="{jsonAddModel>/Address/ZipCode}" />
+				<Label id="label7" text="Supplier Country" />
+				<Input id="input8" value="{jsonAddModel>/Address/Country}" />
+				<Label id="label8" text="Supplier Concurrency" />
+				<Input id="input9" value="{jsonAddModel>/Concurrency}" />
+			</f:content>
+		</f:SimpleForm>
+		<beginButton>
+			<Button id="btn1" icon="sap-icon://save" press="onSave" />
+		</beginButton>
+		<endButton>
+		    <Button id="btn2" icon="sap-icon://cancel" press="onCancel" />
+        </endButton>
+	</Dialog>
+</core:FragmentDefinition>

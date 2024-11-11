@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+	xmlns="sap.m" xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+>
+	<Dialog id="editDialog" title="Supplier Info" >
+    	<f:SimpleForm id="simpleForm" layout="ResponsiveGridLayout" >
+			<f:content>
+				<Label id="label9" text="Supplier ID" />
+                <Input id="input10" editable="false"  value="{updateJsonModel>/ID}" />
+				<Label id="label10" text="Supplier Name" />
+				<Input id="input11" value="{updateJsonModel>/Name}" />
+				<Label id="label12" text="Supplier Street" />
+				<Input id="input13" value="{updateJsonModel>/Address/Street}" />
+				<Label id="label13" text="Supplier City" />
+                <Input id="input14" value="{updateJsonModel>/Address/City}" />
+				<Label id="label15" text="Supplier State" />
+				<Input id="input16" value="{updateJsonModel>/Address/State}" />
+				<Label id="label17" text="Supplier ZipCode" />
+				<Input id="input18" value="{updateJsonModel>/Address/ZipCode}" />
+				<Label id="label19" text="Supplier Country" />
+				<Input id="input20" value="{updateJsonModel>/Address/Country}" />
+				<Label id="label21" text="Supplier Concurrency" />
+				<Input id="input22" value="{updateJsonModel>/Concurrency}" />
+			</f:content>
+		</f:SimpleForm>
+        <beginButton>
+			<Button id="btn3" icon="sap-icon://edit" press="onUpdate" />
+		</beginButton>
+		<endButton>
+		    <Button id="btn4" icon="sap-icon://cancel" press="onUpdateCancel" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

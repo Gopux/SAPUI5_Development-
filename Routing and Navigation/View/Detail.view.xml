@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.tcs.hr.sahadat.project1.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 
+>
+    <Page id="detailPage" title="Detail">
+    <content>
+       <Button id="btn0" text="Navigate to Product" press="onNavProduct" />
+       <Button id="btn10" text="Back to Home" press="onBackHome" />
+    </content>
+    </Page>
+</mvc:View>

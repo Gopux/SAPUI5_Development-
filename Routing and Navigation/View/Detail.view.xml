@@ -2,10 +2,9 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m" 
 >
-    <Page id="detailPage" title="Detail">
+    <Page id="detailPage" title="Detail" showNavButton="true" navButtonPress="onBackHome">
     <content>
        <Button id="btn0" text="Navigate to Product" press="onNavProduct" />
-       <Button id="btn10" text="Back to Home" press="onBackHome" />
     </content>
     </Page>
 </mvc:View>

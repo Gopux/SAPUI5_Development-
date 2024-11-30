@@ -1,0 +1,43 @@
+<mvc:View controllerName="com.tcs.hr.sahadat.project1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns="sap.m" 
+>
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <Table id="idTable"
+		inset="false" items="{SupplierModel>/results}">
+			<headerToolbar>
+			<OverflowToolbar id="OverflowToolbar">
+				<content>
+				    <Text id="text100" text="Supplier Table" />
+					<ToolbarSpacer id="ToolbarSpacer" />
+					<Button id="btn9" text="Go to Detail" press="onGoDetail" />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column id="Column1"
+				width="12em">
+				<Text id="text1" text="Supplier ID" />
+			</Column>
+			<Column id="Column2"
+				minScreenWidth="Desktop"
+				demandPopin="true"
+				hAlign="End">
+				<Text id="text2" text="Supplier Name" />
+            </Column>
+		</columns>
+		<items>
+			<ColumnListItem id="ColumnListItem" vAlign="Middle">
+				<cells>
+					<Link id="link"  text="{path:'SupplierModel>ID', formatter: '.formatter.formatId' }" press="onClick"  />
+					<!-- <Text id="text9" text="{path:'SupplierModel>ID', formatter: '.formatter.formatId'}" /> -->
+					<Text id="text10" text="{SupplierModel>Name}" />
+					
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table> 
+    </content>
+    </Page>
+</mvc:View>
